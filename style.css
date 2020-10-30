@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+.main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+}
+
+header{
+    background-image: url(../project_responsive/pictures/bannerStarwars.jpg);
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#toggle{
+    display: none;
+}
+
+.navbar{
+    height: 3rem;
+    padding: 1.25rem;
+    text-align: center;
+    font-size: 30px;
+    height: 60px;
+    margin-bottom: 50px;
+    text-decoration: none;
+}
+
+.hamburger{
+    display: none;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu > a{
+text-decoration: none;
+color: black;
+}
+
+.main h1{
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.about-section ul{
+    margin-left: 20px;
+
+}
+
+/* If device width is > 640px then apply rules below */ /* HAMBURGER MENU*/
+
+@media(max-width:640px){
+    .hamburger{
+        display: block;
+    }
+    .navbar{
+        text-align: left;
+    }
+     .menu{
+        display: none;
+    }
+    #toggle:checked + .menu{
+        display: block;
+    }
+    .menu > a{
+        display: block;
+        background-color: #232323;
+        color: #cdcdcd;
+        font-size: 1rem;
+        width: 6rem;
+        padding-left: 15px;
+    }
+} 
